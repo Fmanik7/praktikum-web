@@ -1,0 +1,79 @@
+###
+POST http://localhost:10000/categories
+Content-Type: application/json
+
+{
+    "name": "Mobil"
+}
+
+###
+POST http://localhost:10000/categories
+Content-Type: application/json
+
+{
+    "name": "Motor"
+}
+
+###
+GET http://localhost:10000/categories
+
+###
+POST http://localhost:10000/products
+Content-Type: application/json
+
+{
+    "name": "Honda Brio",
+    "price": 150000000,
+    "categoryId": 1
+}
+
+###
+POST http://localhost:10000/products
+Content-Type: application/json
+
+{
+    "name": "Kawasaki ZX25-R",
+    "price": 10000000,
+    "categoryId": 2
+}
+
+###
+GET http://localhost:10000/products
+
+###
+GET http://localhost:10000/products/1
+
+###
+POST http://localhost:10000/sales
+Content-Type: application/json
+
+{
+    "productId": 1,
+    "qty": 2,
+    "total": 300000000
+}
+
+###
+POST http://localhost:10000/sales
+Content-Type: application/json
+
+{
+    "productId": 2,
+    "qty": 1,
+    "total": 10000000
+}
+
+###
+GET http://localhost:10000/sales
+
+###
+PATCH  http://localhost:10000/products/2
+Content-Type: application/json
+
+{
+    "name": "Kawasaki ZX25-R",
+    "price": 120000000
+}
+
+###
+DELETE  http://localhost:10000/products/1
